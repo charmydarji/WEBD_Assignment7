@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <main class="calculator-container">
+      <section class="user-welcome">
+        <h1>Welcome, <span id="username">User</span>!</h1>
+      </section>
+      <form id="calculatorForm" class="calculator-form">
+        <div class="input-group">
+          <label>Number 1:</label>
+          <input
+            type="text"
+            id="num1"
+            class="input-field"
+            placeholder="Number 1"
+            required
+          />
+          <span class="error-message" id="num1Error"></span>
+        </div>
+        <div class="input-group">
+          <label>Number 2:</label>
+          <input
+            type="text"
+            id="num2"
+            class="input-field"
+            placeholder="Number 2"
+            required
+          />
+          <span class="error-message" id="num2Error"></span>
+        </div>
+        <div class="operations">
+          <button type="button" class="btn operation-add" data-operation="add">
+            +
+          </button>
+          <button
+            type="button"
+            class="btn operation-subtract"
+            data-operation="subtract"
+          >
+            -
+          </button>
+          <button
+            type="button"
+            class="btn operation-multiply"
+            data-operation="multiply"
+          >
+            ×
+          </button>
+          <button
+            type="button"
+            class="btn operation-divide"
+            data-operation="divide"
+          >
+            ÷
+          </button>
+        </div>
+        <div class="result-section">
+          <input
+            type="text"
+            id="result"
+            class="input-result"
+            readonly
+            placeholder="Result"
+          />
+        </div>
+      </form>
+    </main>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
